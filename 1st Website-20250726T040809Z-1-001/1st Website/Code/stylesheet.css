@@ -1,0 +1,588 @@
+ * {
+   margin: 0;
+   padding: 0;
+
+ }
+
+ body {
+   font-family: 'Segoe UI', sans-serif;
+   color: #1B1B1B;
+   overflow-x: hidden;
+ }
+
+ html {
+   scroll-behavior: smooth;
+ }
+
+ /* =======================
+       NAVIGATION BAR STYLES
+    ======================== */
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #1C1C1C;
+   padding: 1rem 2rem;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+ }
+
+ .logo img {
+   padding: 0;
+   height: 45px;
+ }
+
+ .nav-links {
+   display: flex;
+   gap: 2rem;
+ }
+
+ .nav-links a {
+   color: #F3EBD5;
+   text-decoration: none;
+   font-weight: 500;
+   position: relative;
+   padding-bottom: 4px;
+ }
+
+ .nav-links a::after {
+   content: '';
+   position: absolute;
+   width: 0%;
+   height: 2px;
+   left: 0;
+   bottom: 0;
+   background-color: #D4AF37;
+   transition: width 0.3s ease;
+ }
+
+ .nav-links a:hover::after,
+ .nav-links a.active::after {
+   width: 100%;
+ }
+
+ .hamburger {
+   display: none;
+   font-size: 1.8rem;
+   color: #F3EBD5;
+   cursor: pointer;
+ }
+
+ /* =======================
+       HERO SECTION
+    ======================== */
+ .hero {
+   background-image: url(/Enchanced/FinalLPImage.png);
+   background-size: cover;
+   background-position: center;
+   height: 140vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 2rem;
+   position: relative;
+ }
+
+ .hero::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(52, 32, 15, 0.65)
+ }
+
+ .hero-content {
+   position: relative;
+   z-index: 1;
+ }
+
+ .hero h1 {
+   font-size: 3rem;
+   margin-bottom: 1rem;
+   color: #d4af37;
+ }
+
+ .hero p {
+   font-size: 1.25rem;
+   margin-bottom: 2rem;
+   color: #c4a76d;
+ }
+
+ .hero a {
+   text-decoration: none;
+   background-color: #EFBAD3;
+   color: #1B1B1B;
+   padding: 0.75rem 1.5rem;
+   border-radius: 8px;
+   font-weight: bold;
+   transition: background-color 0.3s;
+ }
+
+ .hero a:hover {
+   background-color: #e5a0c1;
+ }
+
+ /* =======================
+       MAIN PAGE STYLES
+    ======================== */
+
+ Main {
+   background-color: #e8ccdb;
+ }
+
+ /* =======================
+       BOUQUETS SECTION
+    ======================== */
+
+ .bouquet {
+   text-align: center;
+   padding: 2rem 2rem;
+ }
+
+ .bouquet h2 {
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color: #1B1B1B;
+ }
+
+ .bouquet p {
+   font-size: 1rem;
+   margin-bottom: 2rem;
+   line-height: 1.6rem;
+   color: #1B1B1B;
+ }
+
+ .store-gallery {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 1.5rem;
+   padding: 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .store-gallery img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+ }
+
+ .store-gallery img.stay {
+   max-height: 30vh;
+ }
+
+ .store-gallery img:hover {
+   transform: scale(1.03);
+ }
+
+ .store-gallery img:nth-child(1) {
+   grid-column: 1;
+   grid-row: 1 / span 2;
+ }
+
+ .store-gallery img:nth-child(2) {
+   grid-column: 2;
+   grid-row: 1;
+ }
+
+ .store-gallery img:nth-child(3) {
+   grid-column: 3;
+   grid-row: 1;
+ }
+
+ .store-gallery img:nth-child(4) {
+   grid-column: 2;
+   grid-row: 2;
+ }
+
+ .store-gallery img:nth-child(5) {
+   grid-column: 3;
+   grid-row: 2;
+ }
+
+ .store-gallery img:nth-child(6) {
+   grid-column: 4;
+   grid-row: 1 / span 2;
+ }
+
+ .frstbtn {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 2rem;
+ }
+
+ .frstbtn a {
+   text-decoration: none;
+   background-color: #dd98b8;
+   color: #1B1B1B;
+   padding: 0.75rem 1.5rem;
+   border-radius: 8px;
+   font-weight: bold;
+   transition: background-color, transform 0.3s ease;
+   text-align: center;
+   justify-content: center;
+ }
+
+ .frstbtn a:hover {
+   background-color: #dd80ad;
+   transform: scale(1.03);
+ }
+
+
+
+
+ .divider {
+   border: 2px solid #c4a76d;
+   width: 55.56%;
+   margin-left: 22.22%;
+   margin-right: 22.22%;
+   border-radius: 6px;
+ }
+
+ /* =======================
+       ABOUT SECTION
+    ======================== */
+
+ .about-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+   padding: 50px 20px;
+   flex-wrap: wrap;
+ }
+
+ .about-image img {
+   max-width: 100%;
+   width: 400px;
+   border-radius: 15px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   border: 3px solid black;
+   transition: transform 0.3s ease;
+ }
+
+ .about-image img:hover {
+   transform: scale(1.03);
+ }
+
+ .about-text {
+   max-width: 600px;
+   font-size: 1.1rem;
+   line-height: 1.8rem;
+ }
+
+ .about-text h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+ }
+
+ /* =======================
+       GALLERY SECTION
+    ======================== */
+
+ .gallery-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 50px;
+   gap: 50px;
+   /* Space between text and gallery */
+   /* Or your page color */
+   flex-wrap: wrap;
+   /* Mobile-friendly */
+ }
+
+ .gallery-images {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   min-width: 300px;
+   max-width: 700px;
+   gap: 1.5rem;
+   flex: 1;
+ }
+
+ .gallery-images img {
+   width: 100%;
+   height: 90%;
+   object-fit: cover;
+   border-radius: 12px;
+   transition: transform 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .gallery-images img:hover {
+   transform: scale(1.03);
+
+ }
+
+ .gallery-text {
+   text-align: left;
+   color: #1B1B1B;
+   line-height: 2.5rem;
+   min-width: 250px;
+   max-width: 400px;
+   flex: 1;
+   font-size: 1.7rem;
+ }
+
+ .gallery-text h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+ }
+
+ .scndbtn {
+   display: flex;
+   justify-content: left;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+ }
+
+ .scndbtn a {
+   text-decoration: none;
+   background-color: #dd98b8;
+   color: #1B1B1B;
+   padding: 0.75rem 1.5rem;
+   border-radius: 8px;
+   font-weight: bold;
+   transition: background-color, transform 0.3s ease;
+   text-align: center;
+   justify-content: center;
+ }
+
+ .scndbtn a:hover {
+   background-color: #dd80ad;
+   transform: scale(1.03);
+ }
+
+ /* =======================
+       CONTACT SECTION
+    ======================== */
+
+ .contact {
+   text-align: center;
+   background-color: #eecde0;
+   padding: 4rem 2rem;
+ }
+
+ .contact h2 {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+ }
+
+ .contact-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+   align-items: flex-start;
+   /* <-- allows varying card heights */
+ }
+
+ .contact-card {
+   background-color: #2d2b2b;
+   color: #f1c457;
+   border-radius: 1rem;
+   width: 300px;
+   text-align: center;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: auto;
+   /* let cards size themselves */
+   max-width: 390px;
+   transition: transform 0.3s ease;
+ }
+
+ .contact-card:hover {
+   transform: scale(1.02);
+   
+ }
+
+ .bouquet-img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 1rem;
+   margin-bottom: 1rem;
+ }
+
+ .icon-label {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.5rem;
+   margin-bottom: 1rem;
+ }
+
+ .icon-img {
+   width: 40px;
+   height: 40px;
+ }
+
+ .contact-btn {
+   background-color: #f1c457;
+   color: #2d2b2b;
+   padding: 0.5rem 1.2rem;
+   border: none;
+   border-radius: 999px;
+   text-decoration: none;
+   font-weight: bold;
+   transition: background-color 0.3s ease;
+ }
+
+ .contact-btn:hover {
+   background-color: #d9ae3b;
+ }
+
+ .side-card {
+   align-self: center;
+   padding-bottom: 1.5rem;
+ }
+
+
+ /* Center Card Style */
+ .center-card {
+   align-self: auto;
+   /* let center card grow if content is larger */
+   padding: 2rem;
+   max-width: 320px;
+   height: 400px;
+   /* fixed height for center card */
+   justify-content: space-evenly;
+
+ }
+
+ .center-card .icon-img-large {
+   width: 54.56%;
+   height: auto;
+   margin-bottom: 1rem;
+ }
+
+ .center-card p {
+   color: #f1c457;
+   font-size: 1rem;
+   margin-bottom: 0.5rem;
+ }
+
+ .phone-number {
+   font-size: 1.5rem;
+   font-weight: bold;
+ }
+ footer {
+  position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #1B1B1B;
+   color: white;
+   text-align: center;
+   padding: 2rem;
+ }
+
+ /* =======================
+       RESPONSIVE
+    ======================== */
+ @media (max-width: 768px) {
+   .nav-links {
+     display: none;
+     flex-direction: column;
+     background-color: #1C1C1C;
+     width: 100%;
+     margin-top: 1rem;
+   }
+
+   .nav-links.show {
+     display: flex;
+   }
+
+   .hamburger {
+     display: block;
+   }
+
+   .navbar {
+     flex-wrap: wrap;
+     align-items: center;
+   }
+
+   .hero h1 {
+     font-size: 2.25rem;
+   }
+
+   .hero p {
+     font-size: 1rem;
+   }
+
+   .store-gallery {
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     grid-template-rows: auto;
+   }
+
+   .store-gallery img {
+     grid-column: auto !important;
+     grid-row: auto !important;
+     max-height: none;
+     aspect-ratio: 1 / 1;
+     object-fit: cover;
+   }
+
+   .store-gallery img.stay {
+     max-height: none;
+   }
+
+   .about-container {
+     flex-direction: column;
+     text-align: center;
+   }
+
+   .about-text {
+     text-align: center;
+     padding: 0 10px;
+   }
+
+   .gallery-container {
+     flex-direction: column;
+     padding: 30px 20px;
+     text-align: center;
+   }
+
+   .gallery-text {
+     text-align: center;
+     max-width: 100%;
+     margin-bottom: 30px;
+   }
+
+   .gallery-text h2 {
+     font-size: 1.5rem;
+   }
+
+   .gallery-images {
+     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+     gap: 1rem;
+     max-width: 100%;
+     min-width: 0;
+   }
+
+   .scndbtn {
+     justify-content: center;
+   }
+
+   .contact-container {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .contact-card {
+     width: 90%;
+   }
+
+   .center-card {
+     width: 90%;
+
+   }
+ }
